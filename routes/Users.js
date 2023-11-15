@@ -312,8 +312,7 @@ router.post("/vr", (req, res) => {
                 email: req.body.email,
                 contactnumber: req.body.contactnumber,
                 opentime: req.body.opentime,
-                closetime: req.body.closetime,
-                counter:0
+                closetime: req.body.closetime
             });
         
             newUser.save()
@@ -420,7 +419,7 @@ router.post("/kummar", (req, res) => {
             // });
         }
         else {
-            user.counter=user.counter+1;
+            // user.counter=user.counter+1;
             
             user.save();
             res.json(user);
@@ -455,7 +454,7 @@ router.post("/kummari", (req, res) => {
             // });
         }
         else {
-            user.counter=user.counter-1;
+            // user.counter=user.counter-1;
             
             user.save();
             res.json(user);
@@ -1055,24 +1054,17 @@ router.post("/emphasis", function (req, res) {
                 else {
                     var hi;
                     if (users.status === "Placed") {
-                        
-                        if(user.counter<10){
                             users.status = "Accepted";
                             user.money = user.money + users.quantity*users.price;
-                            user.counter=user.counter+1;
+                            // user.counter=user.counter+1;
                             
-
-                        }
-                        else{
-                            hi="Busy";
-
-                        }
+   
                     }
                     else if (users.status === "Accepted") {
                         users.status = "Cooked";
                     }
                     else if (users.status === "Cooked") {
-                        user.counter=user.counter-1;
+                        // user.counter=user.counter-1;
                         users.status = "ReadyforPickup";
                     }
                     else if (users.status === "ReadyforPickup") {
