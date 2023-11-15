@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // Set the MongoDB connection URI. Replace 'your_mongodb_connection_uri' with your actual MongoDB URI.
-const mongoURI = 'mongodb+srv://kanchireddyvarshithreddy:B0ARMIvxmlZToidl@clove.qm4gool.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://kanchireddyvarshithreddy:qK73qQV5wrlJdMRk@clove.qm4gool.mongodb.net/?retryWrites=true&w=majority';
 
 // Set up Mongoose connection with options (including the useUnifiedTopology option).
 const mongooseOptions = {
